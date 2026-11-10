@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="styles/styles.css">
     <!-- title webpage -->
     <title>My Coffee House</title>
+    <!-- after i ran through the html validator it said there was an error in the order of my h3 tags, 
+     i had orginally organzied by visual hierachy instead of structrual hierachy so i put in the ai prompt 
+     "please change all current h2 headings to h3, and all h3 headings to h2" -->
 </head>
 <!-- add body with header underneath, followed by nav, followed by main, followed by footer -->
 <body>
+    <!-- add div class="container" for whole body -->
+     <div class="container">
     <!-- add header with the image and alt text of the logo and My coffee house title  -->
     <header>
          <img src="images/my-coffee-shop-logo.svg" alt="My Coffee House Logo">
@@ -34,8 +39,8 @@
         <!-- add section for about us plus h3, followed by h2 then 5 images with alt text -->
 
         <section id="homepage">
-        <h3>WELCOME TO MY COFFEE HOUSE</h3>
-        <h2>EXPERIENCE A NEW WAY TO DRINK COFFEE</h2>
+        <h2>WELCOME TO MY COFFEE HOUSE</h2>
+        <h3>EXPERIENCE A NEW WAY TO DRINK COFFEE</h3>
         <div class="image-gallery">
             <img src="images/latte.jpeg" alt="Latte">
             <img src="images/coffee-beans.jpeg" alt="Coffee Beans">
@@ -48,16 +53,16 @@
         <!-- add a new div, h3 title followed by h2 then image and alt text followed by h2 and p, image alt text, h2, p - image alt text, h2,p  -->
 
         <div class="what-we-offer">
-            <h3>WHAT WE OFFER</h3>
-            <h2>WHY VISIT US?</h2>
+            <h2>WHAT WE OFFER</h2>
+            <h3>WHY VISIT US?</h3>
             <img src="images/fair-trade.svg" alt="Fair Trade Icon">
-            <h2>FAIR TRADE COFFEE</h2>
+            <h3>FAIR TRADE COFFEE</h3>
             <P>We build direct relationships with the farmers and producers who help in the development of delicious, sustainable and organic coffee.</P>
             <img src="images/local-baked-goods.svg" alt="Local Baked Goods Icon">
-            <h2>LOCAL BAKED GOODS</h2>
+            <h3>LOCAL BAKED GOODS</h3>
             <p>We use local products to bake our goods and bring in a variety of treats from local bakers with our community.</p>
-            <img src="images/made-with-love.svg" alt="Coffe Cup Icon">
-            <h2>MADE WITH LOVE</h2>
+            <img src="images/made-with-love.svg" alt="Coffee Cup Icon">
+            <h3>MADE WITH LOVE</h3>
             <p>We value our customers and make it our priority to serve everyone with respect and a friendly smile to start their day of right.</p>
         </div>
         </section>
@@ -65,11 +70,11 @@
         <!-- add new section for menu, h3 followed by h2, button, h3, h2 and button -->
 
         <section class="menu">
-            <h3>OUR MENU</h3>
-            <h2>EXPLORE WHAT WE HAVE TO OFFER YOU</h2>
+            <h2>OUR MENU</h2>
+            <h3>EXPLORE WHAT WE HAVE TO OFFER YOU</h3>
             <button>EXPLORE OUR MENU</button>
-            <h3>LOCATIONS</h3>
-            <h2>FIND YOUR NEAREST COFFEE SHOP</h2>
+            <h2>LOCATIONS</h2>
+            <h3>FIND YOUR NEAREST COFFEE SHOP</h3>
             <button>VIEW LOCATIONS</button>
         </section>
 
@@ -78,8 +83,8 @@
         <section class="about-us">
             <div class="our-story">
             <img src="images/about-us.jpeg" alt="Two Baristas Pouring Coffee">
-            <h3>ABOUT US</h3>
-            <h2>READ OUR STORY</h2>
+            <h2>ABOUT US</h2>
+            <h3>READ OUR STORY</h3>
             <p>In the heart of our community, My Coffee House emerged as a humble local coffee shop that sought to redefine the coffee experience. Founded with a passion for quality brews and a commitment to fostering genuine connections, we embarked on this journey with a vision to create a warm and inviting space for coffee enthusiasts and casual patrons alike.</p>
             <br>
             <p>My Coffee House quickly became a cherished gathering spot, where the rich aroma of freshly ground coffee beans mingled with the laughter of friends and the tapping of keyboards from those seeking a cozy workspace.</p>
@@ -88,17 +93,17 @@
 
             <!-- insert a div for testimonials, h3, h2, then repeated 3x image, p followed by h3 -->
              <div class="testimonials">
-                <h3>TESTIMONIALS</h3>
-                <h2>WHAT OUR CUSTOMERS SAY ABOUT US</h2>
+                <h2>TESTIMONIALS</h2>
+                <h3>WHAT OUR CUSTOMERS SAY ABOUT US</h3>
                 <img src="images/testimonial-1.jpeg" alt="Woman, drinking coffee and smiling">
                 <P>"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</P>
-                <h2>JANE D., TORONTO</h2>
+                <h3>JANE D., TORONTO</h3>
                 <img src="images/testimonial-2.jpeg" alt="Man, smiling looking into distance">
                 <p>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
-                <h2>SCOTT S., OTTAWA</h2>
+                <h3>SCOTT S., OTTAWA</h3>
                 <img src="images/testimonial-3.jpeg" alt="Woman, smiling with iced coffee">
                 <p>"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
-                <h2>Susie F., OTTAWA</h2>
+                <h3>Susie F., OTTAWA</h3>
              </div>
 
 
@@ -113,6 +118,6 @@
     <footer>
         &copy; 2024 My Coffee Company. All rights reserved.
     </footer>
-
+</div>
 </body>
 </html>
