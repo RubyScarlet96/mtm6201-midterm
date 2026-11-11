@@ -15,28 +15,36 @@
 <body>
     <!-- add div class="container" for whole body -->
      <div class="container">
+        <!-- add a nav for skiplinks for accessibility with class skip-link & aria label, make sure each sentence says skip to -->
+        <nav class="skip-link" aria-label="Skip links">
+            <a href="#mainnav">Skip to main navigation</a>
+            <a href="#homepage">Skip to main content</a>
+            <a href="#menu">Skip to menu</a>
+            <a href="#about-us">Skip to about us</a>
+            <a href="#footer">Skip to footer</a>
+        </nav>
     <!-- add header with the image and alt text of the logo and My coffee house title  -->
     <header>
          <img src="images/my-coffee-shop-logo.svg" alt="My Coffee House Logo">
         My Coffee House
     </header>
-    <!-- add navigation, 3 links, all caps for names -->
-    <nav>
+    <!-- add navigation add aria label to differentiate between navs, 3 links, all caps for names -->
+    <nav id="mainnav" aria-label="Main navigation">
         <ul>
-            <li><a href="#aboutus">ABOUT US</a></li>
+            <li><a href="#about-us">ABOUT US</a></li>
             <li><a href="#menu">MENU</a></li>
             <li><a href="#locations">LOCATIONS</a></li>
         </ul>
     </nav>
-<!-- under main h1 , then a paragraph followed by a button -->
+<!-- under main h1 , then a paragraph followed by a button - add id to section -->
     <main>
-        <section>
+        <section id="banner">
         <h1>EXPIERENCE COFFEE LIKE NEVER BEFORE</h1>
         <p>Welcome to My Coffee House, where we serve the finest coffee blends from around the world. Our baristas are passionate about crafting the perfect cup of coffee for you.</p>
         <button>Explore Our Menu</button>
         </section>
 
-        <!-- add section for about us plus h3, followed by h2 then 5 images with alt text -->
+        <!-- add section for about us plus h3, followed by h2 then 5 images with alt text add id to section -->
 
         <section id="homepage">
         <h2>WELCOME TO MY COFFEE HOUSE</h2>
@@ -50,9 +58,9 @@
         </div>
         
 
-        <!-- add a new div, h3 title followed by h2 then image and alt text followed by h2 and p, image alt text, h2, p - image alt text, h2,p  -->
+        <!-- add a new div - add id, h3 title followed by h2 then image and alt text followed by h2 and p, image alt text, h2, p - image alt text, h2,p  -->
 
-        <div class="what-we-offer">
+        <div id="what-we-offer">
             <h2>WHAT WE OFFER</h2>
             <h3>WHY VISIT US?</h3>
             <img src="images/fair-trade.svg" alt="Fair Trade Icon">
@@ -69,18 +77,18 @@
 
         <!-- add new section for menu, h3 followed by h2, button, h3, h2 and button -->
 
-        <section class="menu">
+        <section id="menu">
             <h2>OUR MENU</h2>
             <h3>EXPLORE WHAT WE HAVE TO OFFER YOU</h3>
             <button>EXPLORE OUR MENU</button>
-            <h2>LOCATIONS</h2>
+            <h2 id="locations">LOCATIONS</h2>
             <h3>FIND YOUR NEAREST COFFEE SHOP</h3>
             <button>VIEW LOCATIONS</button>
         </section>
 
-        <!-- create new section for about us, then a div for our story - insert image with alt text, add AND h3 h2 followed by p with a break and another p and a button -->
+        <!-- create new section for about us add id, then a div for our story - insert image with alt text, add AND h3 h2 followed by p with a break and another p and a button -->
 
-        <section class="about-us">
+        <section id="about-us" >
             <div class="our-story">
             <img src="images/about-us.jpeg" alt="Two Baristas Pouring Coffee">
             <h2>ABOUT US</h2>
@@ -92,7 +100,7 @@
             </div>
 
             <!-- insert a div for testimonials, h3, h2, then repeated 3x image, p followed by h3 -->
-             <div class="testimonials">
+             <div id="testimonials" >
                 <h2>TESTIMONIALS</h2>
                 <h3>WHAT OUR CUSTOMERS SAY ABOUT US</h3>
                 <img src="images/testimonial-1.jpeg" alt="Woman, drinking coffee and smiling">
@@ -115,7 +123,7 @@
     </main>
 
    <!-- add footer with copyright information -->
-    <footer>
+    <footer id="footer">
         &copy; 2024 My Coffee Company. All rights reserved.
     </footer>
 </div>
