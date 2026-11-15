@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link CSS style sheet -->
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- google fonts links -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato&display=swap" rel="stylesheet">
     <!-- title webpage -->
     <title>My Coffee House</title>
     <!-- after i ran through the html validator it said there was an error in the order of my h3 tags, 
@@ -12,6 +16,7 @@
      "please change all current h2 headings to h3, and all h3 headings to h2" -->
 </head>
 <!-- add body with header underneath, followed by nav, followed by main, followed by footer -->
+ <!-- added class="wrapper" to main sections as per css -->
 <body>
     <!-- add div class="container" for whole body -->
      <div class="container">
@@ -23,30 +28,29 @@
             <a href="#about-us">Skip to about us</a>
             <a href="#footer">Skip to footer</a>
         </nav>
-    <!-- add header with the image and alt text of the logo and My coffee house title  -->
-    <header>
+    <!-- add header with the image and alt text of the logo and My coffee house title plus aria -->
+    <header class="site-header" role="banner">
          <img src="images/my-coffee-shop-logo.svg" alt="My Coffee House Logo">
-        My Coffee House
     </header>
     <!-- add navigation add aria label to differentiate between navs, 3 links, all caps for names -->
-    <nav id="mainnav" aria-label="Main navigation">
+    <nav id="mainnav" role="Main navigation">
         <ul>
-            <li><a href="#about-us">ABOUT US</a></li>
-            <li><a href="#menu">MENU</a></li>
-            <li><a href="#locations">LOCATIONS</a></li>
+            <li><a href="#about-us" aria-label="About Us">ABOUT US</a></li>
+            <li><a href="#menu" aria-label="Menu">MENU</a></li>
+            <li><a href="#locations" aria-label="Locations">LOCATIONS</a></li>
         </ul>
     </nav>
 <!-- under main h1 , then a paragraph followed by a button - add id to section -->
     <main>
-        <section id="banner">
+        <section id="banner" class="wrapper">
         <h1>EXPIERENCE COFFEE LIKE NEVER BEFORE</h1>
         <p>Welcome to My Coffee House, where we serve the finest coffee blends from around the world. Our baristas are passionate about crafting the perfect cup of coffee for you.</p>
-        <button>Explore Our Menu</button>
+        <button aria-label="Explore our menu from banner">Explore Our Menu</button>
         </section>
 
         <!-- add section for about us plus h3, followed by h2 then 5 images with alt text add id to section -->
 
-        <section id="homepage">
+        <section id="homepage" role="homepage" class="wrapper">
         <h2>WELCOME TO MY COFFEE HOUSE</h2>
         <h3>EXPERIENCE A NEW WAY TO DRINK COFFEE</h3>
         <div class="image-gallery">
@@ -60,7 +64,7 @@
 
         <!-- add a new div - add id, h3 title followed by h2 then image and alt text followed by h2 and p, image alt text, h2, p - image alt text, h2,p  -->
 
-        <div id="what-we-offer">
+        <div id="what-we-offer" role="what-we-offer">
             <h2>WHAT WE OFFER</h2>
             <h3>WHY VISIT US?</h3>
             <img src="images/fair-trade.svg" alt="Fair Trade Icon">
@@ -77,18 +81,18 @@
 
         <!-- add new section for menu, h3 followed by h2, button, h3, h2 and button -->
 
-        <section id="menu">
+        <section id="menu" role="menu" class="wrapper">
             <h2>OUR MENU</h2>
             <h3>EXPLORE WHAT WE HAVE TO OFFER YOU</h3>
-            <button>EXPLORE OUR MENU</button>
-            <h2 id="locations">LOCATIONS</h2>
+            <button aria-label="View full menu">EXPLORE OUR MENU</button>
+            <h2 id="locations" role="locations">LOCATIONS</h2>
             <h3>FIND YOUR NEAREST COFFEE SHOP</h3>
             <button>VIEW LOCATIONS</button>
         </section>
 
         <!-- create new section for about us add id, then a div for our story - insert image with alt text, add AND h3 h2 followed by p with a break and another p and a button -->
 
-        <section id="about-us" >
+        <section id="about-us" role="about-us" class="wrapper">
             <div class="our-story">
             <img src="images/about-us.jpeg" alt="Two Baristas Pouring Coffee">
             <h2>ABOUT US</h2>
@@ -96,22 +100,22 @@
             <p>In the heart of our community, My Coffee House emerged as a humble local coffee shop that sought to redefine the coffee experience. Founded with a passion for quality brews and a commitment to fostering genuine connections, we embarked on this journey with a vision to create a warm and inviting space for coffee enthusiasts and casual patrons alike.</p>
             <br>
             <p>My Coffee House quickly became a cherished gathering spot, where the rich aroma of freshly ground coffee beans mingled with the laughter of friends and the tapping of keyboards from those seeking a cozy workspace.</p>
-            <button>LEARN MORE</button>
+            <button aria-label="Learn more about our company">LEARN MORE</button>
             </div>
 
-            <!-- insert a div for testimonials, h3, h2, then repeated 3x image, p followed by h3 -->
-             <div id="testimonials" >
+            <!-- insert a div for testimonials, h3, h2, then repeated 3x image, p followed by h3 - changed to h2 due to heirarchy-->
+             <div id="testimonials" role="testimonials">
                 <h2>TESTIMONIALS</h2>
                 <h3>WHAT OUR CUSTOMERS SAY ABOUT US</h3>
                 <img src="images/testimonial-1.jpeg" alt="Woman, drinking coffee and smiling">
                 <P>"I always make a point to visit My Coffee Company when in Ottawa. Delicious coffee and friendly service."</P>
-                <h3>JANE D., TORONTO</h3>
+                <h2>JANE D., TORONTO</h2>
                 <img src="images/testimonial-2.jpeg" alt="Man, smiling looking into distance">
                 <p>"Great atmosphere to get some work done while enjoying a cup or two of incredible coffee."</p>
-                <h3>SCOTT S., OTTAWA</h3>
+                <h2>SCOTT S., OTTAWA</h2>
                 <img src="images/testimonial-3.jpeg" alt="Woman, smiling with iced coffee">
                 <p>"Best coffee in Ottawa and the service is top notch. Would highly recommend a visit."</p>
-                <h3>Susie F., OTTAWA</h3>
+                <h2>Susie F., OTTAWA</h2>
              </div>
 
 
@@ -123,7 +127,7 @@
     </main>
 
    <!-- add footer with copyright information -->
-    <footer id="footer">
+    <footer id="footer" role="footer">
         &copy; 2024 My Coffee Company. All rights reserved.
     </footer>
 </div>

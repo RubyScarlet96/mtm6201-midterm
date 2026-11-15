@@ -48,4 +48,109 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* apply box sizing */
 
+html{
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+/* css requirements = The maximum width of the wrapper within each section is 1200px - could apply it to the class wrapper 
+but since the nav is outside a wrapper and content is within the container, we'll apply it there and add the background colour */
+
+
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin:0 auto;
+	background-color: #f3f0e9;
+	align-items: center;
+}
+
+.wrapper{
+  width: 100%;
+  margin:0 auto;
+  align-items: center;
+}
+/* adjust image size so conatiner fits properly */
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+/* add skip link styles to hide skip links from users who don't need a screen reader */
+.skip-link{
+	position:absolute;
+	top: auto;
+	left: -99999px;
+}
+
+
+/* lato is font for headings and navigation */
+
+h1,h2,h3,h4,h5,h6,nav {
+  font-family: 'lato', sans-serif;
+}
+
+/* karla is font for body text and buttons */
+
+p, button {
+  font-family: 'karla', sans-serif;
+}
+/* mobile screen query */
+@media screen and (max-width: 767px) {
+	h1{
+		/* recommended typesscales are in descending order but due to accesibility headings were organized by structure not visual heirchy 
+		so  h3 should be larger than h2 */
+		font-size: 2.027rem;
+	}
+	h3{
+		font-size: 1.802rem;
+	}
+	h2{
+		font-size: 1.424rem;
+	}
+	p{
+		font-size: 1rem;
+	}
+
+  
+}
+
+/* min width media query 768px add given font sizes*/
+@media screen and (min-width: 768px) {
+	h1{
+		font-size: 2.986rem;
+	}
+	h3{
+		font-size: 2.488rem;
+	}
+	h2{
+		font-size: 1.728rem;
+	}	
+	p{
+		font-size: 1rem;
+	}
+
+  
+}
+
+/* min width query 1100px add given font sizes */
+@media screen and (min-width: 1100px) {
+  h1{
+	font-size: 3.815rem;
+  }
+  h3{
+	font-size: 3.052rem;
+  }
+  h2{
+	font-size: 1.953rem;
+  }
+  p{
+	font-size: 1rem;}
+}
