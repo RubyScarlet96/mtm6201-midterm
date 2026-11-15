@@ -89,7 +89,41 @@ img{
 	top: auto;
 	left: -99999px;
 }
+/* buidl out header, change background -remove text docration, display flex and change text color */
 
+header {
+	background-color: #000000;
+}
+
+#mainnav ul{
+	display: flex;
+	justify-content: space-around;
+
+}
+
+#mainnav a{
+	color: #ffffff;
+	text-decoration: none;
+	
+}
+
+/* add banner background image
+asked ai why the height was messed up it told me i needed to add a min-height instead of doing height: auto
+it all suggested i add a gradient overlay, the linear-gradient code is from ai */
+#banner{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+	 url('../images/hero-background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;	
+	min-height: 80vh;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
+}
 
 /* lato is font for headings and navigation */
 
@@ -97,6 +131,9 @@ h1,h2,h3,h4,h5,h6,nav {
   font-family: 'lato', sans-serif;
 }
 
+h2{
+	color: #d69e3d;
+}
 /* karla is font for body text and buttons */
 
 p, button {
