@@ -93,6 +93,17 @@ img{
 
 header {
 	background-color: #000000;
+	padding: 20px;
+}
+
+#banner {
+	min-height: 50vh;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	text-align: center;
 }
 
 #mainnav ul{
@@ -116,22 +127,49 @@ it all suggested i add a gradient overlay, the linear-gradient code is from ai *
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;	
-	min-height: 80vh;
-	color: #ffffff;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items:center;
-	text-align: center;
 }
+
+#banner h1{
+	font-weight: bold;
+}
+
+#menu{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+	url('../images/coffee-shop.jpeg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#menu h3{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+div #testimonials {
+	background-color: #000000;
+}
+
+div #testimonials h3, .p1, .p2, .p3{
+	color: #ffffff;
+}
+
+footer{
+	background-color: #000000;
+	color: #ffffff;
+}
+
+
+
 
 /* lato is font for headings and navigation */
 
 h1,h2,h3,h4,h5,h6,nav {
   font-family: 'lato', sans-serif;
+  line-height: 1.2;
 }
 
-h2{
+h2, .h-1, .h-2, .h-3{
 	color: #d69e3d;
 }
 /* karla is font for body text and buttons */
@@ -139,6 +177,7 @@ h2{
 p, button {
   font-family: 'karla', sans-serif;
 }
+
 /* mobile screen query */
 @media screen and (max-width: 767px) {
 	h1{
@@ -155,8 +194,91 @@ p, button {
 	p{
 		font-size: 1rem;
 	}
+/* add display grid to header to adjust logo and nav */
+	header{
+		display: grid;
+		grid-template-columns: repeat (2, 1fr);
+		justify-content: center;
+		grid-gap: 1rem;
+		padding: 1rem;
+		font-size: 10px;
+	}
 
-  
+/*  add display grid to order images correctly, use template colomns then select the first image through 1st child to span it across 2*/
+    .image-gallery {
+	      padding: 10px;
+	      display: grid;
+	      grid-template-columns: repeat(2, 1fr);
+	      gap: 20px;
+	
+     }
+
+	 .image-gallery img:first-child{
+		grid-column: span 2;
+	 }
+
+	 /* what we offer section needs to display flex to center align */
+	 #what-we-offer, #menu{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 20px;
+		padding: 20px;
+	 }
+
+	 #what-we-offer img{
+		width: 40%;
+	 }
+
+	 /* took a lot of messing around with grid but figured out how to get the writting to overlap
+	 i watched a few videos and did ask ai but my issue was the 2nd line of text (the names) kept overlapping with the
+	 paragraph, i tried just using transform but then that left a big gap where the text was supposed to be
+	 i then realized i could combine the 2 */
+
+	.card1, .card2, .card3 {
+		display: grid;
+	}
+
+	.card1 p, .card1 img, .card2 p, .card2 img, .card3 p, .card3 img{
+		grid-area: 1/1;
+	}
+
+	.card1 p, .card2 p, .card3 p {
+		align-self: end;
+	}
+
+	.p1, .p2, .p3{
+		transform: translateY(-60px);
+	}
+	.h-1, .h-2, .h-3{
+		transform: translateY(-30px);
+	}
+
+	
+
+	/* asked ai how to get the images properly formated as they were somehwat cropped, it told me to use object-fit cover
+	and set a height, this cut off img2 and img3 in the wrong place so they needed an object-position - the filter brightness 
+	was also from asking how to get the tint from ai */
+
+	.img1, .img2, .img3 {
+		height: 400px;
+		object-fit:cover;
+		margin-top: 15px;
+		filter: brightness(70%);
+	}
+
+	.img2, .img3 {
+		object-position: top;
+	}
+	
+	#testimonials {
+		padding: 10px;
+	}
+
+
+
+
 }
 
 /* min width media query 768px add given font sizes*/
