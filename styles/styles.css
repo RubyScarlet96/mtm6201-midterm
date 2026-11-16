@@ -169,6 +169,13 @@ footer{
 	font-weight: bold;
 
 }
+#banner button{
+	background-color: #ffffff;
+	color: #000000;
+	padding: 12px 24px;
+	border: none;
+	font-weight: bold;
+}
 
 #menu .b2{
 	background-color: transparent;
@@ -224,7 +231,7 @@ p, button {
 /* add display grid to header to adjust logo and nav */
 	header{
 		display: grid;
-		grid-template-columns: repeat (2, 1fr);
+		grid-template-columns:repeat(2, 1fr);
 		justify-content: center;
 		grid-gap: 1rem;
 		padding: 1rem;
@@ -366,6 +373,88 @@ p, button {
 	p{
 		font-size: 1rem;
 	}
+/* adjusting content in banner using display flex */
+	#banner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	#banner h1, #banner p{
+		width: 85%;
+	}
+	#banner button{
+		margin-top: 30px;
+	}
+/* copying and pasting adjustments from mobile and tweaking them to fit tablet */
+	#homepage {
+		padding: 80px 10px 30px 10px;
+	}
+
+	#homepage h3, #homepage h2 {
+		margin-bottom: 20px;
+	}
+	/* change to span 4 columns */
+	 .image-gallery {
+	      padding: 10px;
+	      display: grid;
+	      grid-template-columns: repeat(4, 1fr);
+	      gap: 20px;
+	
+     }
+/* change to span 2 colmuns and 2 rows */
+	 /* .image-gallery img:first-child{
+		grid-column: span 2;
+		grid-row: span 2;
+	 }
+
+	#what-we-offer{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: ; */
+
+	 /* menu button area change display to both row and column, double it and add classes*/
+	 #menu{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: center;
+		gap: 20px;
+		padding: 50px;
+	 }
+
+	 
+	  .m-class, .l-class{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+	 }
+
+	 .our-story{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(5, auto);
+		align-items: center;
+		gap: 10px 40px;
+		padding: 30px;
+	 }
+
+	 .our-story :first-child{
+		grid-column: 1/2;
+		grid-row: 1/7;
+		width: 100%;
+		height: auto;
+
+	 }
+
+	 .our-story button{
+		justify-self: start;
+		margin-top: 10px;
+	 }
+
 
   
 }
