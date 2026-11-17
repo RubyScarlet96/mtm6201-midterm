@@ -231,11 +231,17 @@ p, button {
 /* add display grid to header to adjust logo and nav */
 	header{
 		display: grid;
-		grid-template-columns:repeat(2, 1fr);
+		grid-template-columns: 1fr;
 		justify-content: center;
 		grid-gap: 1rem;
 		padding: 1rem;
 		font-size: 10px;
+	}
+
+	header img{
+		width: 40%;
+		display: flex;
+		justify-self: center;
 	}
 
 	#homepage {
@@ -244,6 +250,14 @@ p, button {
 
 	#homepage h3, #homepage h2 {
 		margin-bottom: 20px;
+	}
+
+	#banner button{
+		margin-top: 20px;
+	}
+
+	#banner p{
+		margin-top: 10px;
 	}
 
 /*  add display grid to order images correctly, use template colomns then select the first image through 1st child to span it across 2*/
@@ -362,16 +376,16 @@ p, button {
 /* min width media query 768px add given font sizes*/
 @media screen and (min-width: 768px) {
 	h1{
-		font-size: 2.986rem;
+		font-size: 47.78px;
 	}
 	h3{
-		font-size: 2.488rem;
+		font-size: 39.81px;
 	}
 	h2{
-		font-size: 1.728rem;
+		font-size: 27.65px;
 	}	
 	p{
-		font-size: 1rem;
+		font-size: 16px;
 	}
 /* adjusting content in banner using display flex */
 	#banner {
@@ -381,12 +395,26 @@ p, button {
 		align-items: center;
 		text-align: center;
 	}
+
+	header img{
+		width: 30%;
+		display: flex;
+		justify-self: center;
+		margin-bottom: 30px;
+	}
+
+	header nav{
+		width: 50%;
+		justify-self: center;
+	}
+
 	#banner h1, #banner p{
 		width: 85%;
 	}
 	#banner button{
 		margin-top: 30px;
 	}
+
 /* copying and pasting adjustments from mobile and tweaking them to fit tablet */
 	#homepage {
 		padding: 80px 10px 30px 10px;
@@ -404,17 +432,48 @@ p, button {
 	
      }
 /* change to span 2 colmuns and 2 rows */
-	 /* .image-gallery img:first-child{
+	 .image-gallery img:first-child{
 		grid-column: span 2;
 		grid-row: span 2;
 	 }
 
-	#what-we-offer{
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: ; */
+	 /* what we offer needs flexbox applied, using flex wrap and flex basis for formatting */
+	 #what-we-offer h2, #what-we-offer h3{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
 
-	 /* menu button area change display to both row and column, double it and add classes*/
+	 }
+
+	 #what-we-offer .coffee .block img{
+		max-width: 35%;
+	 }
+
+	 #what-we-offer h2{
+		margin-top: 70px;
+	 }
+
+
+	 #what-we-offer .coffee{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	 }
+
+	  #what-we-offer .coffee .block:nth-child(1){
+		flex-basis: calc(50% - 10px);
+	  }
+
+	  #what-we-offer .coffee .block:nth-child(2){
+		flex-basis: calc(50% - 10px);
+	  }
+
+	  #what-we-offer .coffee .block:nth-child(3){
+		flex-basis: calc(50% - 10px);
+	  }
+ /* menu button area change display to both row and column, double it and add classes*/
 	 #menu{
 		display: flex;
 		flex-direction: row;
@@ -433,11 +492,14 @@ p, button {
 
 	 }
 
+	 #about-us .our-story {
+		margin-top: 90px;
+		margin-bottom: 90px;
+	 }
+
 	 .our-story{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(5, auto);
-		align-items: center;
 		gap: 10px 40px;
 		padding: 30px;
 	 }
@@ -454,6 +516,12 @@ p, button {
 		justify-self: start;
 		margin-top: 10px;
 	 }
+
+	 .our-story h2{
+		margin-top: 60px;
+	 }
+
+	 
 
 
   
