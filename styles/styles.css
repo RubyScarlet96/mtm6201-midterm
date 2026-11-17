@@ -521,7 +521,64 @@ p, button {
 		margin-top: 60px;
 	 }
 
-	 
+	 #testimonials h2{
+		padding-top: 120px;
+	 }
+
+	 #testimonials h3{
+		width:60%;
+		margin-bottom: 15px;
+
+	 }
+
+	 /* add display flex to move images into a row then apply */
+
+	 #testimonials .cards{
+		display: flex;
+		gap: 10px;
+		padding: 10px;
+	 }
+
+	 /* i was getting stuck on moving the text ove rthe images again so i asked ai how to do it with grid or flex properties
+	 i didn't copy and paste but i did write out the code exactly as displayed by ai */
+	 .card1, .card2, .card3{
+		flex:1;
+		display:grid;
+	 }
+/* it said putting an astrix beside the > targets all child elements in the card  */
+	 .card1>*,.card2>*,.card3>*{
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+
+	 }
+/* it wanted me to add more code for the image here but only the brightness seemed necessary */
+#testimonials img{
+	filter:brightness(75%);
+}
+
+/* there was also a bunch of extra code i felt was unnecessary so i just took what i needed which was the align-self and z-index
+and padding, padding amounts were adjusted */
+ .p1, .p2, .p3{
+	align-self: end;
+	padding:15px 15px 70px 15px;
+	z-index: 1;
+}
+
+ .h-1, .h-2, .h-3{
+	align-self: end;
+	padding-bottom: 50px;
+	padding-left: 15px;
+	z-index: 1;
+}
+
+#footer {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+
+
+
 
 
   
