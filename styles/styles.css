@@ -97,7 +97,6 @@ header {
 }
 
 #banner {
-	min-height: 50vh;
 	color: #ffffff;
 	display: flex;
 	flex-direction: column;
@@ -252,6 +251,10 @@ p, button {
 		margin-bottom: 20px;
 	}
 
+	#banner{
+		min-height: 50vh;
+	}
+
 	#banner button{
 		margin-top: 20px;
 	}
@@ -373,8 +376,11 @@ p, button {
 
 }
 
-/* min width media query 768px add given font sizes*/
-@media screen and (min-width: 768px) {
+/* min width media query 768px add given font sizes - added in a max-width since i put size restrictions in the code that 
+cascade into the desktop - discovered th error when asking ai why my flexbox on the nav in desktop wasn't working properly
+they suggested there was code above that would conflict and to re-write, i felt editing the code would make room for mistakes and 
+it was easier to change the meedia queary*/
+@media screen and (min-width: 768px) and (max-width: 1099px) {
 	h1{
 		font-size: 47.78px;
 	}
@@ -406,6 +412,10 @@ p, button {
 	header nav{
 		width: 50%;
 		justify-self: center;
+	}
+
+	#banner{
+		min-height: 50vh;
 	}
 
 	#banner h1, #banner p{
@@ -598,3 +608,218 @@ and padding, padding amounts were adjusted */
   p{
 	font-size: 1rem;}
 }
+
+/* display flex header, to align in a row, use align to center items on y-axis, change header img width to match image and 
+add padding to the individual list items */
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0;
+	margin: 0 auto;
+
+}
+
+header img{
+	width:20%;
+}
+
+header nav ul li{
+	padding: 5px;
+}
+
+/* background-position was a suggestion from aito be able to change how it was cropped, the rest of the coede was me */
+#banner{
+	min-height: 65vh;
+	background-size: cover;
+	background-position: center 47%;
+}
+
+/* copy and pasted from aboce with % adjustmentss for desktop */
+#banner h1, #banner p{
+    width: 55%;
+}
+#banner button{
+    margin-top: 30px;
+}
+
+/* copy and pasted from above with significant increases on left and right padding */
+#homepage {
+    padding: 80px 120px 70px 120px;
+}
+
+#homepage h3, #homepage h2 {
+	margin-bottom: 20px;
+}
+
+/* changed width of header by % so it would line up properly */
+#homepage h3{
+	width:60%;
+}
+	
+ .image-gallery {
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	
+}
+
+.image-gallery img:first-child{
+    grid-column: span 2;
+	grid-row: span 2;
+}
+
+/* copy and pasted from above 
+for some reason the text wasn't centering properly in display flex, ai said that was unncecessary and to fix use block*/
+ #what-we-offer h2, #what-we-offer h3{
+  display: block;
+  width: 100%;
+  text-align: center;
+
+}
+
+#what-we-offer .coffee .block img{
+max-width: 35%;
+}
+
+#what-we-offer h2{
+margin-top: 70px;
+}
+
+/* i added this in because the font looks significantly smaller here on the h3 then it did in the other mockups and i felt there 
+needed to be a bit of space between the icons and the header */
+#what-we-offer .block h3{
+	text-size-adjust: 50%;
+	margin-top: 10px;
+}
+
+
+#what-we-offer .coffee{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+text-align: center;
+}
+
+#what-we-offer .coffee .block:nth-child(1){
+flex-basis: calc(33.33% - 10px);
+}
+
+#what-we-offer .coffee .block:nth-child(2){
+flex-basis: calc(33.33% - 10px);
+}
+
+#what-we-offer .coffee .block:nth-child(3){
+flex-basis: calc(33.33% - 10px);
+}
+
+/* copy and pasted from above */
+
+ #menu{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: center;
+		gap: 20px;
+		padding: 50px;
+	 }
+
+	 
+	  .m-class, .l-class{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+	 }
+
+	 #about-us .our-story {
+		margin-top: 90px;
+		margin-bottom: 90px;
+	 }
+
+	 .our-story{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px 40px;
+		padding: 30px;
+	 }
+
+	 .our-story :first-child{
+		grid-column: 1/2;
+		grid-row: 1/7;
+		width: 100%;
+		height: auto;
+
+	 }
+
+	 .our-story button{
+		justify-self: start;
+		margin-top: 10px;
+	 }
+
+	 .our-story h2{
+		margin-top: 60px;
+	 }
+	 
+/* * added padding to match mockup */ 
+#testimonials{
+	padding-left: 120px;
+	padding-right: 120px;
+}
+	 #testimonials h2{
+		padding-top: 120px;
+	 }
+
+	 #testimonials h3{
+		width:60%;
+		margin-bottom: 15px;
+
+	 }
+
+	 /* add display flex to move images into a row then apply */
+
+	 #testimonials .cards{
+		display: flex;
+		gap: 10px;
+		padding: 10px;
+	 }
+
+	 /* i was getting stuck on moving the text ove rthe images again so i asked ai how to do it with grid or flex properties
+	 i didn't copy and paste but i did write out the code exactly as displayed by ai */
+	 .card1, .card2, .card3{
+		flex:1;
+		display:grid;
+	 }
+/* it said putting an astrix beside the > targets all child elements in the card  */
+	 .card1>*,.card2>*,.card3>*{
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+
+	 }
+/* it wanted me to add more code for the image here but only the brightness seemed necessary */
+#testimonials img{
+	filter:brightness(75%);
+}
+
+/* there was also a bunch of extra code i felt was unnecessary so i just took what i needed which was the align-self and z-index
+and padding, padding amounts were adjusted */
+ .p1, .p2, .p3{
+	align-self: end;
+	padding:15px 15px 70px 15px;
+	z-index: 1;
+}
+
+ .h-1, .h-2, .h-3{
+	align-self: end;
+	padding-bottom: 50px;
+	padding-left: 15px;
+	z-index: 1;
+}
+
+#footer {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
