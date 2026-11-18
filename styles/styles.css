@@ -175,6 +175,17 @@ footer{
 	border: none;
 	font-weight: bold;
 }
+/* apply hover and active state to all buttons, because of the way the background colours are traget per button
+the active and hover states only appear to work when using the same ids and classes */
+#banner button:hover, #menu .b1:hover, #menu .b2:hover, .our-story button:hover{
+	background-color: #966f2c;
+	transition: 0.1s ease-in-out;
+}
+
+#banner button:active,#menu .b1:active, #menu .b2:active, .our-story button:active{
+	background-color:#d69e3d;
+	transition: 0.3s ease-in;
+}
 
 #menu .b2{
 	background-color: transparent;
